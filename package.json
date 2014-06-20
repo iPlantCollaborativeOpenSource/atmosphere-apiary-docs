@@ -1,0 +1,12 @@
+{
+  "name": "atmosphere-apiary-docs",
+  "version": "0.0.1",
+  "author": "iPlant Collaborative",
+  "description": "Atmosphere API Documentation",
+  "dependencies": {
+    "gulp": "~3.6.2",
+    "gulp-concat": "~2.2.0",
+    "gulp-clean": "~0.2.4",
+    "gulp-notify": "~1.2.5"
+  }
+}
