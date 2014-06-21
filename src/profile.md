@@ -1,5 +1,5 @@
 # Group Profile
-The Profile contains information about the authenticated user.
+The Profile contains information about the authenticated user. Profile can be thought of as the 'entry-point' to the Atmosphere APIs. Once authentiated, a user can find their default provider and identity. The IDs for provider and Identity can be used to navigate the rest of the API.
 
 ## Profile [/profile]
 A single Profile object.
@@ -52,7 +52,7 @@ Each Profile has the following properties:
                     },
                     "provider_id": 1,
                     "id": 1,
-                    "provider": "iPlant Cloud - Tucson"
+                    "provider": "planet tatooine"
                 }
             }
             
