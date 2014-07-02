@@ -11,7 +11,7 @@ Each Group has the following properties:
 - **permissions**: collection of permissions TODO
 - **leaders**: collection of numbers regarding the leaders TODO
 - **instances**: list of instances that are being used by the group
-- **applicaiton**: list of application that are being used by the group
+- **applications**: list of applications that are being used by the group
 - **provider_machines**: list of provider machines TODO
 
 + Parameters
