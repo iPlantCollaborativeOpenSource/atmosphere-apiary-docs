@@ -23,7 +23,7 @@ Each Provider has the following properties:
 
     + Body
 
-              {
+            {
                 "type": "OpenStack",
                 "location": "planetTatooine",
                 "id": 1,
@@ -31,41 +31,36 @@ Each Provider has the following properties:
                 "virtualization": 2,
                 "public": false,
                 "traits": []
-              }              
+            }              
 
 
 ### Retrieve a Provider [GET]
 + Response 200 (application/json)
 
+    [Provider][]
+
+## Providers Collection [/provider]
+Collection of all Providers.
+
++ Model (application/json)
+
+    JSON representation of Providers Collection Resource.
+
     + Body
 
-            {
-                "type": "OpenStack",
-                "location": "planet tatooine",
-                "id": 1,
-                "description": "This is the description of the OpenStack provider.",
-                "virtualization": 2,
-                "public": false,
-                "traits": [
-                    1
-                ]
-            }
-## Providers Collection [/provider]
+            [
+                {
+                    "type": "OpenStack",
+                    "location": "planetTatooine",
+                    "id": 1,
+                    "description": "planetTatooine",
+                    "virtualization": 2,
+                    "public": false,
+                    "traits": []
+                }
+            ]
+            
 ### List all Providers [GET]
 + Response 200 (application/json)
 
-        [
-            {
-                "type": "OpenStack",
-                "location": "planet tatooine",
-                "id": 1,
-                "description": "this is the description of the openstack provider",
-                "virtualization": 2,
-                "public": false,
-                "traits": [
-                    1
-                ]
-            }
-        ]
-
-
+    [Projects Collection][]
