@@ -63,4 +63,4 @@ Collection of all Providers.
 ### List all Providers [GET]
 + Response 200 (application/json)
 
-    [Projects Collection][]
+    [Providers Collection][]
