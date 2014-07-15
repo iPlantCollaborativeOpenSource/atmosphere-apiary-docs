@@ -207,6 +207,21 @@ The Instances attached to the Project.
 + Response 200 (application/json)
 
     [Instances Collection][]
+    
+## Project Instance [/project/{project_id}/instance/{instance_id}]
+The Instances attached to the Project.
+
++ Parameters
+    + project_id (required, number, '1') ... Number `id` of the Project.
+    + instance_id (required, string, '26f0795e-f80b-11e3-8ef5-b2227cce2b54') ... Number `alias` of the Instance.
+    
+### Add Instance to Project [PUT]
++ Response 200 (application/json)
+
+    [Instance][]
+    
+### Remove Instance from Project [DELETE]
++ Response 204 (application/json)
             
 ## Project Volumes [/project/{id}/volume]
 The Volumes attached to the Project.
@@ -218,3 +233,18 @@ The Volumes attached to the Project.
 + Response 200 (application/json)
 
     [Volumes Collection][]
+    
+## Project Volume [/project/{project_id}/volume/{volume_id}]
+The Instances attached to the Project.
+
++ Parameters
+    + project_id (required, number, '1') ... Number `id` of the Project.
+    + volume_id (required, string, '13138b97-786a-4e57-9acc-5d41cfd21f75') ... Number `alias` of the Volume.
+    
+### Add Volume to Project [PUT]
++ Response 200 (application/json)
+
+    [Volume][]
+    
+### Remove Volume from Project [DELETE]
++ Response 204 (application/json)
