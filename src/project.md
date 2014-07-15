@@ -209,7 +209,7 @@ The Instances attached to the Project.
     [Instances Collection][]
     
 ## Project Instance [/project/{project_id}/instance/{instance_id}]
-The Instances attached to the Project.
+The endpoint to add or remove an Instance from a Project.
 
 + Parameters
     + project_id (required, number, '1') ... Number `id` of the Project.
@@ -235,7 +235,7 @@ The Volumes attached to the Project.
     [Volumes Collection][]
     
 ## Project Volume [/project/{project_id}/volume/{volume_id}]
-The Instances attached to the Project.
+The endpoint to add or remove a Volume from a Project.
 
 + Parameters
     + project_id (required, number, '1') ... Number `id` of the Project.
