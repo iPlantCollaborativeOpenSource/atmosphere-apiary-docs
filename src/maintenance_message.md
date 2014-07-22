@@ -23,12 +23,12 @@ Each Maintenance Message has the following properties:
     + Body
 
             {
-                "id": 1
-                "title": "Planned Maintenance"
-                "message": "Atmosphere Provider Cloud is under maintenance."
-                "provider_id": 1
-                "disable_login": true
-                "start_date": "2014-07-21T06:05:40Z"
+                "id": 1,
+                "title": "Planned Maintenance",
+                "message": "Atmosphere Provider Cloud is under maintenance.",
+                "provider_id": 1,
+                "disable_login": true,
+                "start_date": "2014-07-21T06:05:40Z",
                 "end_date": null
             }
 
@@ -48,12 +48,12 @@ Collection of all Maintenance Messages. You must pass in active=true if you only
 
             [
                 {
-                    "id": 1
-                    "title": "Planned Maintenance"
-                    "message": "Atmosphere Provider Cloud is under maintenance."
-                    "provider_id": 1
-                    "disable_login": true
-                    "start_date": "2014-07-21T06:05:40Z"
+                    "id": 1,
+                    "title": "Planned Maintenance",
+                    "message": "Atmosphere Provider Cloud is under maintenance.",
+                    "provider_id": 1,
+                    "disable_login": true,
+                    "start_date": "2014-07-21T06:05:40Z",
                     "end_date": null
                 }
             ]
