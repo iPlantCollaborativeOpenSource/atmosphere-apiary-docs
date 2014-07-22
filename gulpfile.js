@@ -14,7 +14,8 @@ var paths = {
     './src/provider.md',
     './src/provider_sizes.md',
     './src/volume.md',
-    './src/project.md'
+    './src/project.md',
+    './src/maintenance_message.md'
   ]
 };
 
