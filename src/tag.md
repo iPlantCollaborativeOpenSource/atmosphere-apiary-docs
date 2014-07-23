@@ -27,7 +27,7 @@ Each Tag has the following properties:
                 "description": "Featured applications receive priority ordering over non-featured applications",
             }
 
-### Retrieve an Application [GET]
+### Retrieve a Tag [GET]
 + Response 200 (application/json)
 
     [Tag][]          

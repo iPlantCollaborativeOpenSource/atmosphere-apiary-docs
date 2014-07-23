@@ -54,7 +54,7 @@ Each Instance has the following properties:
                     "provider": 1
                 },
                 "name": "Ubuntu 13.04 w/Docker 0.9",
-                "tags": []
+                "tags": ["SpliceGrapher"]
             }
 
 ### Retrieve an Instance [GET]
@@ -180,7 +180,7 @@ Collection of all Instances for a specific identity and provider.
                         "provider": 1
                     },
                     "name": "Ubuntu 13.04 w/Docker 0.9",
-                    "tags": []
+                    "tags": ["SpliceGrapher"]
                 }
             ]
     
@@ -201,9 +201,9 @@ Launch an instance of an application.  You must specify the following properties
 + Request (application/json)
 
         { 
-          machine_alias: "237f983e-f80d-11e3-8ef5-b2227cce2b54"
-          size_alias: "1"
-          name: "Instance Name"
+            machine_alias: "237f983e-f80d-11e3-8ef5-b2227cce2b54"
+            size_alias: "1"
+            name: "Instance Name"
         }
 
 + Response 201 (application/json)
