@@ -72,3 +72,20 @@ Collection of all Tags.
 + Response 200 (application/json)
 
     [Tags Collection][]
+
+### Create a Tag [POST]
+Create a Project.  You must specify the following properties:
+
+- **name**: a name for the project
+- **description**: a description of the project
+
++ Request (application/json)
+
+        {
+            "name": "Tag name",
+            "description": "A description of the tag."
+        }
+
++ Response 201 (application/json)
+
+    [Tag][]
