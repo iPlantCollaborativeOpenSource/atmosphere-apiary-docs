@@ -23,8 +23,8 @@ Each Tag has the following properties:
             {
                 "id": 1,
                 "user": null,
-                "name": "Featured"
-                "description": "Featured applications receive priority ordering over non-featured applications",
+                "name": "Featured",
+                "description": "Featured applications receive priority ordering over non-featured applications"
             }
 
 ### Retrieve a Tag [GET]
