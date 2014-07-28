@@ -57,7 +57,7 @@ Each Instance has the following properties:
                 "tags": ["SpliceGrapher"],
                 "projects": [
                     1
-                ],
+                ]
             }
 
 ### Retrieve an Instance [GET]
@@ -186,7 +186,7 @@ Collection of all Instances for a specific identity and provider.
                     "tags": ["SpliceGrapher"],
                     "projects": [
                         1
-                    ],
+                    ]
                 }
             ]
     
