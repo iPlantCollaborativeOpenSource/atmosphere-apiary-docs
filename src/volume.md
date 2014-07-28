@@ -45,6 +45,9 @@ Each Volume has the following properties:
                     "created_by": "HanSolo",
                     "provider": 1
                 },
+                "projects": [
+                    1
+                ],
                 "start_date": "2014-05-13T00:24:58Z"
             }
 
@@ -68,19 +71,22 @@ Collection of all Volumes.
 
             [
                 {
+                    "alias": "132333c94-7864-4157-9cq-5441ff321F11",
+                    "created_by": 1,
+                    "name": "My_First_Volume",
+                    "description": "",
                     "status": "available",
+                    "size": 1,
                     "attach_data": {},
+                    "provider": 1,
                     "identity": {
                         "id": 1,
                         "created_by": "HanSolo",
                         "provider": 1
                     },
-                    "alias": "132333c94-7864-4157-9cq-5441ff321F11",
-                    "provider": 1,
-                    "size": 1,
-                    "name": "My_First_Volume",
-                    "description": "",
-                    "created_by": 1,
+                    "projects": [
+                        1
+                    ],
                     "start_date": "2014-05-13T00:24:58Z"
                 },
                 {

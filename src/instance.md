@@ -54,7 +54,10 @@ Each Instance has the following properties:
                     "provider": 1
                 },
                 "name": "Ubuntu 13.04 w/Docker 0.9",
-                "tags": ["SpliceGrapher"]
+                "tags": ["SpliceGrapher"],
+                "projects": [
+                    1
+                ],
             }
 
 ### Retrieve an Instance [GET]
@@ -180,7 +183,10 @@ Collection of all Instances for a specific identity and provider.
                         "provider": 1
                     },
                     "name": "Ubuntu 13.04 w/Docker 0.9",
-                    "tags": ["SpliceGrapher"]
+                    "tags": ["SpliceGrapher"],
+                    "projects": [
+                        1
+                    ],
                 }
             ]
     

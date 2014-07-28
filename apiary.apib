@@ -595,7 +595,10 @@ Each Instance has the following properties:
                     "provider": 1
                 },
                 "name": "Ubuntu 13.04 w/Docker 0.9",
-                "tags": ["SpliceGrapher"]
+                "tags": ["SpliceGrapher"],
+                "projects": [
+                    1
+                ],
             }
 
 ### Retrieve an Instance [GET]
@@ -721,7 +724,10 @@ Collection of all Instances for a specific identity and provider.
                         "provider": 1
                     },
                     "name": "Ubuntu 13.04 w/Docker 0.9",
-                    "tags": ["SpliceGrapher"]
+                    "tags": ["SpliceGrapher"],
+                    "projects": [
+                        1
+                    ],
                 }
             ]
     
@@ -1051,6 +1057,9 @@ Each Volume has the following properties:
                     "created_by": "HanSolo",
                     "provider": 1
                 },
+                "projects": [
+                    1
+                ],
                 "start_date": "2014-05-13T00:24:58Z"
             }
 
@@ -1074,19 +1083,22 @@ Collection of all Volumes.
 
             [
                 {
+                    "alias": "132333c94-7864-4157-9cq-5441ff321F11",
+                    "created_by": 1,
+                    "name": "My_First_Volume",
+                    "description": "",
                     "status": "available",
+                    "size": 1,
                     "attach_data": {},
+                    "provider": 1,
                     "identity": {
                         "id": 1,
                         "created_by": "HanSolo",
                         "provider": 1
                     },
-                    "alias": "132333c94-7864-4157-9cq-5441ff321F11",
-                    "provider": 1,
-                    "size": 1,
-                    "name": "My_First_Volume",
-                    "description": "",
-                    "created_by": 1,
+                    "projects": [
+                        1
+                    ],
                     "start_date": "2014-05-13T00:24:58Z"
                 },
                 {
@@ -1148,53 +1160,55 @@ Each Project has the following properties:
             {
                 "id": 1,
                 "owner": "HanSolo",
-                "name": "Default",
+                "name": "Project 1",
                 "description": "This is my project description",
                 "applications": [],
                 "instances": [
                     {
-                        "alias": "100wer-3c2-48e0-9a34-0623c7d63b62ea",
-                        "alias_hash": "f7c8373138a234076098c098098web9e43",
-                        "application_name": "Base Image",
-                        "application_uuid": "10394-9cc6-5bx3-923e-42234c9f53c",
-                        "created_by": "HanSolo",
-                        "status": "active - deploying",
+                        "alias": "26f0795e-f80b-11e3-8ef5-b2227cce2b54",
+                        "alias_hash": "b30430ab304a637e0fac9a0322edf7a3",
+                        "created_by": "username",
+                        "status": "active",
                         "size_alias": "1",
-                        "machine_alias": "a23431q3-2r50-999e-110p-fa21cbc233t2",
-                        "machine_name": "iPlant Base Image w VNC (04/21/2012)",
-                        "machine_alias_hash": "47f7f56d601be9cad330bc74903e0c38",
-                        "ip_address": "74.125.225.169",
-                        "start_date": "2014-04-17T22:50:22Z",
-                        "token": "103daw-1fa1-44r1-p2e2-31e2e5bbcr6a",
+                        "machine_alias": "4a254940-f80b-11e3-8ef5-b2227cce2b54",
+                        "machine_name": "Ubuntu 13.04 w/Docker 0.9",
+                        "machine_alias_hash": "3f8add823804dc73b221a6c8308a8ab2",
+                        "ip_address": "127.0.0.1",
+                        "start_date": "2014-05-14T18:17:18Z",
+                        "token": null,
                         "has_shell": false,
                         "has_vnc": false,
                         "identity": {
                             "id": 1,
-                            "created_by": "HanSolo",
+                            "created_by": "username",
                             "provider": 1
                         },
-                        "name": "Instance Name",
-                        "tags": [],
-                        "projects": [1]
+                        "name": "Ubuntu 13.04 w/Docker 0.9",
+                        "tags": ["SpliceGrapher"],
+                        "projects": [
+                            1
+                        ]
                     }
                 ],
                 "volumes": [
                     {
+                        "alias": "132333c94-7864-4157-9cq-5441ff321F11",
+                        "created_by": 1,
+                        "name": "My_First_Volume",
+                        "description": "",
                         "status": "available",
-                        "attach_data": "dev/vdc",
+                        "size": 1,
+                        "attach_data": {},
+                        "provider": 1,
                         "identity": {
                             "id": 1,
                             "created_by": "HanSolo",
                             "provider": 1
                         },
-                        "projects": [299],
-                        "alias": "2560cd87-6c67-46c7-a3bb-6e3c10e5f191",
-                        "provider": 1,
-                        "size": 1,
-                        "name": "Volume Name",
-                        "description": "",
-                        "created_by": 1,
-                        "start_date": "2014-03-29T21:17:58Z"
+                        "projects": [
+                            1
+                        ],
+                        "start_date": "2014-05-13T00:24:58Z"
                     }
                 ],
                 "start_date": "2014-04-11T17:51:11.511Z",
@@ -1229,14 +1243,60 @@ Collection of all Projects.
             [
                 {
                     "id": 1,
-                    "owner": "Hansolo",
+                    "owner": "HanSolo",
                     "name": "Project 1",
-                    "description": "My first project.",
+                    "description": "This is my project description",
                     "applications": [],
-                    "instances": [],
-                    "volumes": [],
-                    "start_date": "2014-05-01T19:27:40.910Z",
-                    "end_date": "2014-05-02T19:47:30.055Z"
+                    "instances": [
+                        {
+                            "alias": "26f0795e-f80b-11e3-8ef5-b2227cce2b54",
+                            "alias_hash": "b30430ab304a637e0fac9a0322edf7a3",
+                            "created_by": "username",
+                            "status": "active",
+                            "size_alias": "1",
+                            "machine_alias": "4a254940-f80b-11e3-8ef5-b2227cce2b54",
+                            "machine_name": "Ubuntu 13.04 w/Docker 0.9",
+                            "machine_alias_hash": "3f8add823804dc73b221a6c8308a8ab2",
+                            "ip_address": "127.0.0.1",
+                            "start_date": "2014-05-14T18:17:18Z",
+                            "token": null,
+                            "has_shell": false,
+                            "has_vnc": false,
+                            "identity": {
+                                "id": 1,
+                                "created_by": "username",
+                                "provider": 1
+                            },
+                            "name": "Ubuntu 13.04 w/Docker 0.9",
+                            "tags": ["SpliceGrapher"],
+                            "projects": [
+                                1
+                            ]
+                        }
+                    ],
+                    "volumes": [
+                        {
+                            "alias": "132333c94-7864-4157-9cq-5441ff321F11",
+                            "created_by": 1,
+                            "name": "My_First_Volume",
+                            "description": "",
+                            "status": "available",
+                            "size": 1,
+                            "attach_data": {},
+                            "provider": 1,
+                            "identity": {
+                                "id": 1,
+                                "created_by": "HanSolo",
+                                "provider": 1
+                            },
+                            "projects": [
+                                1
+                            ],
+                            "start_date": "2014-05-13T00:24:58Z"
+                        }
+                    ],
+                    "start_date": "2014-04-11T17:51:11.511Z",
+                    "end_date": null
                 },
                 {
                     "id": 2,
@@ -1244,54 +1304,10 @@ Collection of all Projects.
                     "name": "Project 2",
                     "description": "My second project.",
                     "applications": [],
-                    "instances": [
-                        {
-                            "alias": "7r2833-b853-493m-82b9-f1er58fsaff",
-                            "alias_hash": "b81284baf4fa748c8y0n7sn39encf19553b",
-                            "application_name": "iPlant Base Image w VNC (04/21/2012)",
-                            "application_uuid": "a6b99d36-4cb6-5139-92ce-4q948dj439f53c",
-                            "created_by": "HanSolo",
-                            "status": "active - deploying",
-                            "size_alias": "1",
-                            "machine_alias": "n5013e33-e934-4bt34-ac0d-ea230d00k4242",
-                            "machine_name": "iPlant Base Image w VNC (04/21/2012)",
-                            "machine_alias_hash": "47f2342809809823dd330bc74903e0c38",
-                            "ip_address": "172.22.2.4",
-                            "start_date": "2014-04-17T22:51:19Z",
-                            "token": null,
-                            "has_shell": false,
-                            "has_vnc": false,
-                            "identity": {
-                                "id": 1,
-                                "created_by": "HanSolo",
-                                "provider": 1
-                            },
-                            "name": "Base Image",
-                            "tags": [],
-                            "projects": [1]
-                        }
-                    ],
-                    "volumes": [
-                        {
-                            "status": "available",
-                            "attach_data": "dev/vdc",
-                            "identity": {
-                                "id": 1,
-                                "created_by": "HanSolo",
-                                "provider": 1
-                            },
-                            "projects": [199],
-                            "alias": "21038ser87-6c67-46c7-a3bb-6e234012f191",
-                            "provider": 1,
-                            "size": 1,
-                            "name": "lololol1331",
-                            "description": "",
-                            "created_by": 3,
-                            "start_date": "2014-03-29T21:17:58Z"
-                        }
-                    ],
-                    "start_date": "2014-04-11T17:51:11.511Z",
-                    "end_date": null
+                    "instances": [],
+                    "volumes": [],
+                    "start_date": "2014-05-01T19:27:40.910Z",
+                    "end_date": "2014-05-02T19:47:30.055Z"
                 }
             ]
 
