@@ -1528,25 +1528,30 @@ The history of all of the user's instances since the beginning of time.
 
     + Body
 
-            [
-                {
-                    alias: "36f0795e-f80b-11e3-8ef5-b2227cce2b55"
-                    alias_hash: "c30430ab304a637e0fac9a0322edf7a4"
-                    created_by: "username"
-                    end_date: null
-                    ip_address: "127.0.0.1"
-                    machine_alias: "75fdfca4-d49d-4b2d-b919-a3297bc6d7ae"
-                    machine_alias_hash: "3fb9e7221c139e3813a2a3aa3ea1b57b"
-                    "machine_name": "Ubuntu 13.04 w/Docker 0.9",
-                    "name": "Ubuntu 13.04 w/Docker 0.9",
-                    password: "498f96cb-dbd5-42db-a97d-d9f5e786a931"
-                    provider: "iPlant Cloud - Tucson"
-                    size_alias: "1"
-                    start_date: "2014-08-01T20:10:52Z"
-                    "tags": ["SpliceGrapher"],
-                    token: "d66503d5-c324-4694-acf9-8b1c5b4d12e2"
-                }
-            ]
+            {
+                count: 1
+                next: null
+                previous: null,
+                results: [
+                    {
+                        alias: "36f0795e-f80b-11e3-8ef5-b2227cce2b55"
+                        alias_hash: "c30430ab304a637e0fac9a0322edf7a4"
+                        created_by: "username"
+                        end_date: null
+                        ip_address: "127.0.0.1"
+                        machine_alias: "75fdfca4-d49d-4b2d-b919-a3297bc6d7ae"
+                        machine_alias_hash: "3fb9e7221c139e3813a2a3aa3ea1b57b"
+                        "machine_name": "Ubuntu 13.04 w/Docker 0.9",
+                        "name": "Ubuntu 13.04 w/Docker 0.9",
+                        password: "498f96cb-dbd5-42db-a97d-d9f5e786a931"
+                        provider: "iPlant Cloud - Tucson"
+                        size_alias: "1"
+                        start_date: "2014-08-01T20:10:52Z"
+                        "tags": ["SpliceGrapher"],
+                        token: "d66503d5-c324-4694-acf9-8b1c5b4d12e2"
+                    }
+                ]
+            }
     
 ### List all Instances [GET]
 Get a list of your instances created under the specific provider/identity.
