@@ -98,6 +98,13 @@ Each Project has the following properties:
 + Response 200 (application/json)
 
     [Project][]
+    
+### Delete a Project [DELETE]
+Delete a Project.
+
++ Response 200 (application/json)
+
+    [Project][]
 
 ## Projects Collection [/project]
 Collection of all Projects.
