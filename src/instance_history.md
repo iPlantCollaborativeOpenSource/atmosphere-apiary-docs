@@ -43,10 +43,8 @@ Each Instance History has the following properties:
                 "ip_address": "127.0.0.1",
                 "provider": "iPlant Cloud - Tucson",
                 "tags": ["SpliceGrapher"],
-                
                 "start_date": "2014-08-01T20:10:52Z",
                 "end_date": null,
-                
                 "alias_hash": "c30430ab304a637e0fac9a0322edf7a4",
                 "machine_alias_hash": "3fb9e7221c139e3813a2a3aa3ea1b57b",
                 "password": "498f96cb-dbd5-42db-a97d-d9f5e786a931",
@@ -70,26 +68,26 @@ The history of all of the user's instances since the beginning of time.
     + Body
 
             {
-                count: 1
-                next: null
-                previous: null,
-                results: [
+                "count": 1,
+                "next": null,
+                "previous": null,
+                "results": [
                     {
-                        alias: "36f0795e-f80b-11e3-8ef5-b2227cce2b55"
-                        alias_hash: "c30430ab304a637e0fac9a0322edf7a4"
-                        created_by: "username"
-                        end_date: null
-                        ip_address: "127.0.0.1"
-                        machine_alias: "75fdfca4-d49d-4b2d-b919-a3297bc6d7ae"
-                        machine_alias_hash: "3fb9e7221c139e3813a2a3aa3ea1b57b"
-                        "machine_name": "Ubuntu 13.04 w/Docker 0.9",
+                        "alias": "36f0795e-f80b-11e3-8ef5-b2227cce2b55",
                         "name": "Ubuntu 13.04 w/Docker 0.9",
-                        password: "498f96cb-dbd5-42db-a97d-d9f5e786a931"
-                        provider: "iPlant Cloud - Tucson"
-                        size_alias: "1"
-                        start_date: "2014-08-01T20:10:52Z"
+                        "machine_alias": "75fdfca4-d49d-4b2d-b919-a3297bc6d7ae",
+                        "machine_name": "Ubuntu 13.04 w/Docker 0.9",
+                        "size_alias": "1",
+                        "created_by": "username",
+                        "ip_address": "127.0.0.1",
+                        "provider": "iPlant Cloud - Tucson",
                         "tags": ["SpliceGrapher"],
-                        token: "d66503d5-c324-4694-acf9-8b1c5b4d12e2"
+                        "start_date": "2014-08-01T20:10:52Z",
+                        "end_date": null,
+                        "alias_hash": "c30430ab304a637e0fac9a0322edf7a4",
+                        "machine_alias_hash": "3fb9e7221c139e3813a2a3aa3ea1b57b",
+                        "password": "498f96cb-dbd5-42db-a97d-d9f5e786a931",
+                        "token": "d66503d5-c324-4694-acf9-8b1c5b4d12e2"
                     }
                 ]
             }
