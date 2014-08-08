@@ -21,10 +21,10 @@ Each Tag has the following properties:
     + Body
 
             {
-                "id": 1,
                 "user": null,
-                "name": "Featured",
-                "description": "Featured applications receive priority ordering over non-featured applications"
+                "description": "A description of Ubuntu",
+                "id": 5,
+                "name": "Ubuntu"
             }
 
 ### Retrieve a Tag [GET]
@@ -65,6 +65,12 @@ Collection of all Tags.
                     "description": "Featured applications receive priority ordering over non-featured applications",
                     "id": 4,
                     "name": "Featured"
+                },
+                {
+                    "user": null,
+                    "description": "A description of Ubuntu",
+                    "id": 5,
+                    "name": "Ubuntu"
                 }
             ]
 
