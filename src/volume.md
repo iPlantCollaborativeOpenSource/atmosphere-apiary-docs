@@ -55,6 +55,13 @@ Each Volume has the following properties:
 + Response 200 (application/json)
 
     [Volume][]
+    
+### Destroy a Volume [DELETE]
+Destroy a volume.
+
++ Response 200 (application/json)
+
+    [Volume][]
 
 ## Volumes Collection [/provider/{providerId}/identity/{identityId}/volume]
 Collection of all Volumes.
