@@ -124,3 +124,26 @@ Collection of all Volumes.
 + Response 200 (application/json)
 
     [Volumes Collection][]
+    
+### Create a Volume [POST]
+Create a volume.  You must specify the following properties:
+
+- **name**: the specific version of the application you'd like to launch an instance of.
+- **size**: the size (in GB) of the volume
+- **description**: a description of the volume
+- **model_name**: ???
+- **tags**: ???
+
++ Request (application/json)
+
+        {
+            "name": "asdf",
+            "description": "",
+            "size": 1,
+            "model_name": "volume",
+            "tags": "CF++"
+        }
+
++ Response 201 (application/json)
+
+    [Volume][]
