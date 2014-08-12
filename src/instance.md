@@ -87,15 +87,15 @@ Suspend a running instance.  This will also stop subtracting AU's.
 + Request (application/json)
 
         { 
-            action: "suspend"
+            "action": "suspend"
         }
 
 + Response 200 (application/json)
 
         {
-            message: "The requested action <suspend> was run successfully"
-            object: null
-            result: "success"
+            "message": "The requested action <suspend> was run successfully",
+            "object": null,
+            "result": "success"
         }
 
 ### Resume an Instance [POST]
@@ -110,8 +110,8 @@ Resume a suspended instance.  This will also start subtracting AU's again.
 + Response 200 (application/json)
 
         {
-            message: "The requested action <resume> was run successfully"
-            object: null
+            message: "The requested action <resume> was run successfully",
+            object: null,
             result: "success"
         }
         
@@ -127,8 +127,8 @@ Stop a running instance.  Stopped instances continue to reduce the AU's.
 + Response 200 (application/json)
 
         {
-            message: "The requested action <start> was run successfully"
-            object: null
+            message: "The requested action <start> was run successfully",
+            object: null,
             result: "success"
         }
         
@@ -144,8 +144,8 @@ Start a stopped instance.
 + Response 200 (application/json)
 
         {
-            message: "The requested action <stop> was run successfully"
-            object: null
+            message: "The requested action <stop> was run successfully",
+            object: null,
             result: "success"
         }
 
