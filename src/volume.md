@@ -32,9 +32,9 @@ Each Volume has the following properties:
     + Body
 
             {
-                "alias": "132333c94-7864-4157-9cq-5441ff321F11",
+                "alias": "232333c94-7864-4157-9cq-5441ff321F11",
                 "created_by": 1,
-                "name": "My_First_Volume",
+                "name": "My_Other_Volume",
                 "description": "",
                 "status": "available",
                 "size": 1,
