@@ -1,5 +1,5 @@
 # Group Instance
-Instances are virtual machines that users have created from an application (image).  When a user creates an instance
+Instances are virtual machines that users have created from an image (application).  When a user creates an instance
  it immediately starts deducting AU's from their account.
 
 ## Instance [/provider/{providerId}/identity/{identityId}/instance/{id}]
@@ -8,15 +8,15 @@ A single Instance object.
 Each Instance has the following properties:
 
 - **alias**: id
-- **alias_hash**: N/A
+- **alias_hash**: **[deprecated]**
 - **created_by**: username for the person who created the instance
-- **status**: active, suspended, shutoff, ... others?
+- **status**: the state the instance is in (active, suspended, shutoff, etc.)
 - **size_alias**: the id of the size resource for the instance (number of CPUs, RAM, and Disk Space)
 - **machine_alias**: which image the instance was based off.  Machines are image versions.
 - **ip_address**: IP address you can use to connect to the machine.  Address that start with 196, 178, or 10 are private,
  all others are public.  Instances with an IP address of 0.0.0.0 have not been assigned an IP address yet.
 - **start_date**: the date the instance was created
-- **token**: N/A
+- **token**: **[deprecated]**
 - **has_shell**: true if a user can ssh into the instance
 - **has_vnc**: true if a user can remote desktop into the instance
 - **identity**: which account the instance deducts AU's from

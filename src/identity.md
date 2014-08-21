@@ -10,13 +10,13 @@ Each Identity has the following properties:
 
 - **id**: id of the Identity
 - **provider_id**: the id of the provider this identity is for
-- **provider**: the name of the provider (**todo:** remove this, it doesn't need to be here.  provider_id is enough)
+- **provider**: **[deprecated]** the name of the provider 
 - **quota**: object describing the resources that can be allocated on the provider under this identity
-- **quota.mem**: how much 
-- **quota.suspended_count**: how many instances under this count are currently suspended (yes?)
+- **quota.mem**: the maximum amount of memory that can be allocated across all instances under this identity
+- **quota.suspended_count**: **[deprecated]** how many instances are currently suspended
 - **quota.storage**: the maximum storage space that can be allocated across all volumes under this identity
-- **quota.cpu**: the number of CPUs that can be created with this identity
-- **quota.storage_count**: the number of volumes that can be created with this identity
+- **quota.cpu**: the number of CPUs that can be allocated across all instance under this identity
+- **quota.storage_count**: the maximum number of volumes that can be created under this identity
 
 + Parameters
     + id (required, number, 1) ... Number `id` of the Identity.
