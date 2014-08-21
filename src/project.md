@@ -210,7 +210,7 @@ Create a Project.  You must specify the following properties:
     [Project][]
 
 ## Project Instances [/project/{id}/instance]
-The Instances attached to the Project.
+The Instances in the Project.
 
 + Parameters
     + id (required, number, '1') ... Number `id` of the Project.
@@ -236,7 +236,7 @@ The endpoint to add or remove an Instance from a Project.
 + Response 204 (application/json)
             
 ## Project Volumes [/project/{id}/volume]
-The Volumes attached to the Project.
+The Volumes in the Project.
 
 + Parameters
     + id (required, number, '1') ... Number `id` of the Project.

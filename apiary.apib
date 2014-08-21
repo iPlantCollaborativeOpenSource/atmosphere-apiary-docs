@@ -366,7 +366,21 @@ Each Profile has the following properties:
 + Response 200 (application/json)
 
     [Profile][]
+    
+### Update the Profile [PATCH]
+To update the profile, send a PATCH request that includes the fields you want to modify.  Currently the only modifiable
+ fields are **send_emails** and **icon_set**
 
++ Request (application/json)
+
+        {
+            "send_emails": true,
+            "icon_set": "robots"
+        }
+
++ Response 200 (application/json)
+
+    [Profile][]
 # Group Identity
 Identities are like user account information. A user has at least one identity per provider, and each identity
  contains information about how many resources can be consumed on that provider.  If a user has multiple identities
@@ -1305,7 +1319,7 @@ Create a Project.  You must specify the following properties:
     [Project][]
 
 ## Project Instances [/project/{id}/instance]
-The Instances attached to the Project.
+The Instances in the Project.
 
 + Parameters
     + id (required, number, '1') ... Number `id` of the Project.
@@ -1331,7 +1345,7 @@ The endpoint to add or remove an Instance from a Project.
 + Response 204 (application/json)
             
 ## Project Volumes [/project/{id}/volume]
-The Volumes attached to the Project.
+The Volumes in the Project.
 
 + Parameters
     + id (required, number, '1') ... Number `id` of the Project.

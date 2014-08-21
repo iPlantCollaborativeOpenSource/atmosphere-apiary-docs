@@ -63,3 +63,18 @@ Each Profile has the following properties:
 + Response 200 (application/json)
 
     [Profile][]
+    
+### Update the Profile [PATCH]
+To update the profile, send a PATCH request that includes the fields you want to modify.  Currently the only modifiable
+ fields are **send_emails** and **icon_set**
+
++ Request (application/json)
+
+        {
+            "send_emails": true,
+            "icon_set": "robots"
+        }
+
++ Response 200 (application/json)
+
+    [Profile][]
