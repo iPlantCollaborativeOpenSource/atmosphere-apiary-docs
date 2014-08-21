@@ -1195,7 +1195,8 @@ Each Project has the following properties:
     [Project][]
     
 ### Delete a Project [DELETE]
-Delete a Project.
+Delete a Project.  Projects can only be deleted once all resources (instances and volumes) have been transferred out of
+ it or deleted.  Attempting to delete a project with resources still inside will return a status code of 409 (conflict)
 
 + Response 200 (application/json)
 
