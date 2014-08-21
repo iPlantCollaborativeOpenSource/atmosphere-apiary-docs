@@ -595,6 +595,42 @@ Start a stopped instance.
             object: null,
             result: "success"
         }
+        
+### Attach a Volume [POST]
+Attach a volume to an instance.
+
++ Request (application/json)
+
+        { 
+            action: "attach_volume",
+            volume_id: "21637611-d75c-4c94-a761-dcd58ed8324b"
+        }
+
++ Response 200 (application/json)
+
+        {
+            message: "The requested action <attach_volume> was run successfully",
+            object: null,
+            result: "success"
+        }
+
+### Detach a Volume [POST]
+Detach a volume from an instance.
+
++ Request (application/json)
+
+        { 
+            action: "detach_volume",
+            volume_id: "21637611-d75c-4c94-a761-dcd58ed8324b"
+        }
+
++ Response 200 (application/json)
+
+        {
+            message: "The requested action <detach_volume> was run successfully",
+            object: null,
+            result: "success"
+        }
 
 ## Instances Collection [/provider/{providerId}/identity/{identityId}/instance]
 Collection of all Instances for a specific identity and provider.
