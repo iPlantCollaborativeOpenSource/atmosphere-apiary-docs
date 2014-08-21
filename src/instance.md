@@ -215,15 +215,3 @@ Launch an instance of an application.  You must specify the following properties
 + Response 201 (application/json)
 
     [Instance][]
-
-## Instances Collection **legacy** [/instance]
-Collection of all Instances, **however the data won't be current**.  This endpoint returns the status of your instances
- the last time the server actually checked, which is the last time you called the real-time endpoint.
-
-### List all Instances [GET]
-Get a list of all instances, across all identities and providers, but with values that reflect the last time the
- real-time endpoint was called.
-
-+ Response 200 (application/json)
-
-    [Instances Collection][]
