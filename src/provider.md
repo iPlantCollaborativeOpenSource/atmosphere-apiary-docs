@@ -1,18 +1,18 @@
 # Group Provider
-Providers represent the different Cloud configurations hosted on Atmosphere. Providers can be of type AWS, Eucalyptus, OpenStack.
+Providers represent the different cloud providers managed by Atmosphere.
 
 ## Provider [/provider/{provider_id}]
 A single Provider object.
 
 Each Provider has the following properties:
 
-- **type**: type of provider
-- **location**: location of provider 
-- **id**: id for that provider 
-- **description**: string based description of the provider
-- **virtualization**: Number
-- **public**: boolean
-- **traits**: list 
+- **type**: cloud provider (AWS, Azure, OpenStack, etc.)
+- **location**: the display name for the provider
+- **id**: unique id for the provider 
+- **description**: a description of the provider
+- **virtualization**: **[deprecated]**
+- **public**: **[deprecated]**
+- **traits**: **[deprecated]** 
 
 + Parameters
     + provider_id (required, number, '1') ... Number `provider_id` of the Identity.
@@ -24,9 +24,9 @@ Each Provider has the following properties:
     + Body
 
             {
+                "id": 1,
                 "type": "OpenStack",
                 "location": "planetTatooine",
-                "id": 1,
                 "description": "planetTatooine",
                 "virtualization": 2,
                 "public": false,
@@ -50,9 +50,9 @@ Collection of all Providers.
 
             [
                 {
+                    "id": 1,
                     "type": "OpenStack",
                     "location": "planetTatooine",
-                    "id": 1,
                     "description": "planetTatooine",
                     "virtualization": 2,
                     "public": false,
