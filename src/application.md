@@ -1,43 +1,39 @@
-# Group Application
-Applications are analogous to **Images** or **Snapshots** of a Virtual Machine.
+# Group Image (Application)
+Images are snapshots of an instance at some point in time, including all programs and files.  They can be used to create
+ a clone of an instance for others to use, or simply to save the state of an instance as a backup or recovery.
 
-## Application [/application/{id}]
-A single Application object.
+## Image [/application/{id}]
+A single Image object.
 
-Each Application has the following properties:
+Each Image has the following properties:
 
-- **alias**: id
-- **icon**: custom icon image to use for the application (ex: "/resources/machine_images/ibp.png")
-- **created_by**: username of the person who created the application (typically by requesting an instance to be imaged)
-- **uuid_hash**: **N/A**
-- **tags**: tags applied to the application (an array of strings). Essentially, an application represents the most recent
- version of an image, where the machines are the previous versions, but one of the machines is also the current version.
- I'm not clear on whether these tags are applied to the application directly, or to the most recent machine, and I'm
- also not clear on whether the tags exist on a machine level at all (i.e. whether you can see which tags are applied
- to previous versions)
-- **description**: description of the application
-- **start_date**: when the application was created (added to Atmosphere)
-- **end_date**: Atmosphere implements soft deletes for everything (or nearly everything).  Any applications with an
- end_date before the moment the request was made will (should) be filtered out of the results.  End_dates can also be
+- **alias**: unique id of the image
+- **icon**: (optional) if a custom display icon has been uploaded for this image, this field will contain the relative
+ path to that image (e.g. "/images/icon.png")
+- **created_by**: username of the person who created the image
+- **uuid_hash**: **[deprecated]**
+- **tags**: tags applied to the image (an array of strings).
+- **description**: description of the image
+- **start_date**: the date the image was created
+- **end_date**: Atmosphere implements soft deletes for everything (or nearly everything).  Any images with an
+ end_date before the moment the request was made will be filtered out of the result set.  however, end_dates can also be
  used to schedule resources deletion by setting them at a future date.  This can also be used to give someone access to
  a resource for a limited time (such as for a workshop session).
-- **private**: if private is true, it means the access to the resource is limited to a group of people (one of which is
- you.
-- **featured**: this boolean field can only be set by administration. It's reserved for images that are deemed worthy of
- special attention.
-- **machines**: previous version of the application (image) that also include the current version.  This list also appears
- to contain versions across multiple providers (such as the image for AWS, and the image for OpenStack).
-- **is_bookmarked**: this field is specific to the user making the request, and shows whether they identified this
- application as being personally significant. (**todo:** move this into /profile or a /favorited_application endpoint)
-- **projects**: User specific property.  Which user projects this application has been added to.  (**todo:** remove this from
- the application object)
+- **private**: if this field is true, it means the access to the image is limited to a group of people that includes you
+- **featured**: this boolean field can only be set by Atmosphere staff and is reserved for images that have gone through
+ a special review process
+- **machines**: admittedly, this field is poorly named, but it represents all the previous versions of this image, which
+  includes the current version.  It also shows which cloud providers that image version is available for.
+- **is_bookmarked**: **[user specific property]** this field is specific to the user making the request, and shows whether they identified this
+ images as being personally significant. In the future this will be taken out and moved to a different endpoint.
+- **projects**: **[user specific property]** Shows which projects the user has added this image to.
 
 + Parameters
-    + id (required, string, `bdc31c14-f807-11e3-8ef5-b2227cce2b54`) ... String `uuid` of the Application.
+    + id (required, string, `bdc31c14-f807-11e3-8ef5-b2227cce2b54`) ... String `uuid` of the Image.
     
 + Model (application/json)
 
-    JSON representation of Application Resource.
+    JSON representation of Image Resource.
 
     + Body
 
@@ -69,25 +65,25 @@ Each Application has the following properties:
                 "projects": []
             }
 
-### Retrieve a Single Application [GET]
+### Retrieve a Single Image [GET]
 + Response 200 (application/json)
 
-    [Application][]
+    [Image][]
     
-### Edit an Application [GET]
+### Edit an Image [GET]
 + Response 200 (application/json)
 
-    [Application][]
+    [Image][]
 
-## Applications Collection [/application]
-Collection of all Applications.
+## Images Collection [/application]
+Collection of all Images.
 
 This is both a public and private endpoint.  If accessed without being authenticated you will get a list of all public
- applications.  If authenticated, you will also get any private images you have permission to use.
+ images.  If authenticated, you will also get any private images you have permission to use.
 
 + Model (application/json)
 
-    JSON representation of Applications Collection Resource.
+    JSON representation of the Images Collection.
 
     + Body
 
@@ -236,41 +232,35 @@ This is both a public and private endpoint.  If accessed without being authentic
                 ]
             }
 
-### List all Applications [GET]
+### List all Images [GET]
 
 + Response 200 (application/json)
 
-    [Applications Collection][]
+    [Images Collection][]
 
-## Creating an Application [/provider/{providerId}/identity/{identityId}/request_image/]
-Applications are created by requesting an image be made of a running instance.
+## Request an Image [/provider/{providerId}/identity/{identityId}/request_image/]
+Images are created by sending a request to Atmosphere support.  This is the endpoint used to make that request.
 
 + Parameters
     + id (required, string, 'b94d4964-8de3-4965-a87a-f4cf44d33165') ... String `alias` of the Instance.
     + providerId (required, number, '4') ... Number `id` of the Provider.
 
-### Requesting an Image [POST]
-Creating an application is analogous to requesting an image. To do so, specify the following properties:
+### Request an Image [POST]
+To request an image, you need to specify the following properties:
 
-- **machine_alias**: the specific version of the application you'd like to launch an instance of.
-- **size_alias**: the size of the virtual machine you need
-- **name**: the name of your instance
+- **name**: the name of the image
 - **instance**: alias property of the instance you want imaged
-- **ip_address**: (**todo:** figure out why this is here)
 - **provider**: the id of the provider you want the image to be created for (**todo:** figure out if this is redundant. Is
  it the same as the provider in the url?  Is it the same as the provider the instance is running on?)
-- **description**: A description of either a) what is on the instance, or b) why you're creating the instance (**todo:**
- figure out how this field is used)
-- **software**: What software is installed on the instance (**todo:** figure out how this information is used)
-- **sys**: (**todo:** figure out what this property means)
-- **exclude**: Files on the instance that should be excluded from the image, like ssh keys? (**todo:** figure out what
+- **description**: A description of the image for display purposes
+- **software**: What software is installed on the instance (**todo:** learn out how this information is used)
+- **sys**: (**todo:** learn what this property means)
+- **exclude**: Files on the instance that should be excluded from the image, like ssh keys? (**todo:** learn what
  this property means)
-- **tags**: Additional tags that should be associated with the image? (**todo:** can't this just be carried over from
- the instance?  Are these in addition to the instance tags?  Is this here in case people don't normally tag their
- instances?)
-- **vis**: Can be public, private, or a user-list. If public, everyone can see the image.  If private, only you can.  If
- user specific, only those users can see the list (in the future this should be changed by allowing people to manage
- access to their resources themselves).
+- **tags**: tags that should be applied to the image
+- **vis**: This field can be one of public, private, or a user-list. If public, everyone can view and create an instance
+  from the image.  If this fiedl is private, the user who created the image will be able to see or launch it.  If user
+  specific, only those users that are listed will be able to see or launch the image.
 
 + Request (application/json)
 

@@ -1,6 +1,6 @@
 # Group Project
 Projects are a way for users to group related resources.  Right now users can add Instances and Volumes to a group, but
- we also plan to support adding documents, hyperlinks, Applications (Images), and letting users control access to their
+ we also plan to support adding documents, hyperlinks, Images, and letting users control access to their
  Projects (i.e. adding users, removing users, and specifying permissions such as read-only access or modifying content)
 
 ## Project [/project/{id}]
