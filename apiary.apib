@@ -829,7 +829,8 @@ Collection of all Providers.
     [Providers Collection][]
 
 # Group Size
-Size related resources of the **Atmosphere API**
+Sizes represent the different instance configurations offered by that cloud provider.  Each configuration includes the
+ number of CPUs, memory, and disk space.  Sizes with fewer resources will consume AUs at a slower rate.
 
 ## Provider Sizes Collection [/provider/{providerId}/identity/{identityId}/size]
 + Parameters
@@ -1040,8 +1041,8 @@ Collection of all Volumes.
 ### Create a Volume [POST]
 Create a volume.  You must specify the following properties:
 
-- **name**: the specific version of the application you'd like to launch an instance of.
-- **size**: the size (in GB) of the volume
+- **name**: the name of the volume
+- **size**: the size of the volume in Gigabytes
 - **description**: a description of the volume
 
 + Request (application/json)
@@ -1049,9 +1050,7 @@ Create a volume.  You must specify the following properties:
         {
             "name": "New Volume",
             "description": "Description of new volume",
-            "size": 1,
-            "model_name": "volume",
-            "tags": "CF++"
+            "size": 1
         }
 
 + Response 201 (application/json)

@@ -128,8 +128,8 @@ Collection of all Volumes.
 ### Create a Volume [POST]
 Create a volume.  You must specify the following properties:
 
-- **name**: the specific version of the application you'd like to launch an instance of.
-- **size**: the size (in GB) of the volume
+- **name**: the name of the volume
+- **size**: the size of the volume in Gigabytes
 - **description**: a description of the volume
 
 + Request (application/json)
@@ -137,9 +137,7 @@ Create a volume.  You must specify the following properties:
         {
             "name": "New Volume",
             "description": "Description of new volume",
-            "size": 1,
-            "model_name": "volume",
-            "tags": "CF++"
+            "size": 1
         }
 
 + Response 201 (application/json)
