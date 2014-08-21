@@ -6,7 +6,7 @@ var paths = {
   files: [
     './src/header.md',
     './src/application.md',
-    './src/group.md',
+    //'./src/group.md',
     './src/profile.md',
     './src/identity.md',
     './src/instance.md',
