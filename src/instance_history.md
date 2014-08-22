@@ -1,6 +1,5 @@
 # Group Instance History
-Instances are virtual machines that users have created from an application (image).  When a user creates an instance
- it immediately starts deducting AU's from their account.
+This endpoint returns a list of all instances that a user has launched since the time their account was created.
 
 ## Instance History [/instance_history/{id}]
 A single Instance History object.
@@ -29,7 +28,7 @@ Each Instance History has the following properties:
     
 + Model (application/json)
 
-    JSON representation of Instance Resource.
+    JSON representation of Instance History Resource.
 
     + Body
 
@@ -59,11 +58,11 @@ Get a specific instance history object.
     [Instance History][]
 
 ## Instance History Collection [/instance_history]
-The history of all of the user's instances since the beginning of time.
+The history of all of the user's instances since the date their account was created.
     
 + Model (application/json)
 
-    JSON representation of Instances Collection Resource.
+    JSON representation of Instances History Collection Resource.
 
     + Body
 
@@ -93,7 +92,7 @@ The history of all of the user's instances since the beginning of time.
             }
     
 ### List all Instances [GET]
-Get a list of your instances created under the specific provider/identity.
+Get a list of all the instances the user has created.
 
 + Response 200 (application/json)
 
