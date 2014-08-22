@@ -13,7 +13,7 @@ Each Project has the following properties:
     
 + Model (application/json)
 
-    JSON representation of Project Resource.
+    JSON representation of Null Project Resource.
 
     + Body
 
