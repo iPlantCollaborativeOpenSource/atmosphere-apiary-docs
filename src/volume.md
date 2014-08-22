@@ -7,18 +7,16 @@ A single Volume object.
 
 Each Volume has the following properties:
 
-- **alias**: id (**todo:** we need to standardize on id instead of alias.  Different resources use a different name and
- it should be consistent across all resources)
-- **created_by**: user id of the person who created the volume (**todo:** is this not the same as identity?  Also other
- created_by fields are using username.  Why is this one using a numbered id?)
+- **alias**: unique id for the volume
+- **created_by**: user id of the person who created the volume
 - **name**: name of the volume
 - **description**: description of the volume
-- **status**: status of the volume (attached, available, trasition states) (**todo:** add state list)
+- **status**: status of the volume (detaching, attaching, available or in-use)
 - **size**: size of the volume in Gigabytes
-- **attach_data**: 
-- **provider**: provider the volume is created on?  (**todo:** aren't all volumes created on iTads?)
-- **identity**: account the volume is owned by (**todo:** doesn't this make provider redundant?  provider is an
- identity property)
+- **attach_data**: if the volume is attached to an instance, provides details about which instance it's attached to and
+ where the volume is mounted to on the instance
+- **provider**: provider the volume is created on
+- **identity**: identity that created the volume
 
 + Parameters
     + id (required, string, '13138b97-786a-4e57-9acc-5d41cfd21f75') ... String `alias` of the Volume.
