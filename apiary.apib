@@ -270,16 +270,14 @@ To request an image, you need to specify the following properties:
 
 - **name**: the name of the image
 - **instance**: alias property of the instance you want imaged
-- **provider**: the id of the provider you want the image to be created for (**todo:** figure out if this is redundant. Is
- it the same as the provider in the url?  Is it the same as the provider the instance is running on?)
+- **provider**: the id of the provider you want the image to be created for
 - **description**: A description of the image for display purposes
-- **software**: What software is installed on the instance (**todo:** learn out how this information is used)
-- **sys**: (**todo:** learn what this property means)
-- **exclude**: Files on the instance that should be excluded from the image, like ssh keys? (**todo:** learn what
- this property means)
+- **software**: What software is installed on the instance
+- **sys**: (**todo:** add details for what this field controls)
+- **exclude**: Files on the instance that should be excluded from the image, like ssh keys
 - **tags**: tags that should be applied to the image
 - **vis**: This field can be one of public, private, or a user-list. If public, everyone can view and create an instance
-  from the image.  If this fiedl is private, the user who created the image will be able to see or launch it.  If user
+  from the image.  If this field is private, the user who created the image will be able to see or launch it.  If user
   specific, only those users that are listed will be able to see or launch the image.
 
 + Request (application/json)
