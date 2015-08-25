@@ -8,7 +8,7 @@ var paths = {
     './src/application.md',
     //'./src/group.md',
     './src/profile.md',
-    //'./src/identity.md',
+    './src/identity.md',
     './src/instance.md',
     './src/tag.md',
     './src/provider.md',
